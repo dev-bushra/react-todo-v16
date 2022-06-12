@@ -9,6 +9,8 @@ class App extends Component {
       {id: 2, content: 'play mario kart'}
     ]
   }
+
+  // Delete
   deleteTodo = (id) => {
     const todos = this.state.todos.filter(todo => {
       return todo.id !== id
@@ -17,6 +19,8 @@ class App extends Component {
       todos
     });
   }
+
+  // Add
   addTodo = (todo) => {
     todo.id = Math.random();
     let todos = [...this.state.todos, todo];
@@ -24,6 +28,7 @@ class App extends Component {
       todos
     });
   }
+  
   render() {
     return (
       <div className="todo-app container">

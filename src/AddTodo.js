@@ -4,11 +4,13 @@ class AddTodo extends Component {
   state = {
     content: ''
   }
+
   handleChange = (e) => {
     this.setState({
       content: e.target.value
     });
   }
+
   handleSubmit = (e) => {
     e.preventDefault();
     // call function to add a todo
@@ -17,6 +19,7 @@ class AddTodo extends Component {
       content: ''
     })
   }
+  
   render() {
     return (
       <div>
